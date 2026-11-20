@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         .navbar{
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            padding:1rem 5%;
+            background-color: black; 
+            color: #d1dada;
+            height: 100px;
+            box-shadow: 0 0.6rem 2rem rgba(255, 255, 255, 0.3);
+      
+        }
+        .logo{
+            font-size: 1.35rem;
+            font-weight: bold;
+            letter-spacing: 0.8rem;
+        }
+         .nav_links{
+            display: flex; 
+            gap:1.25rem; 
+            list-style: none; 
+            font-weight: bold;
+            color: white !important;
+            text-decoration: none;
+            list-style: none;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+         .nav_links a {
+            color: white;
+            text-decoration: none;
+        }
+      
+        /*Background Coloring & Animation*/
+        body{
+            min-height: 35vh;
+            margin: 0;
+            background: linear-gradient(135deg, #F58027, #7331A8, #D97634, #4D1582 );
+            animation: gradientShift 7.3s ease infinite;
+            background-size: 400% 400%;
+            font-family:'Snell Roundhand', cursive;
+            text-shadow: 50px 20px 15px rgba(0, 0, 0, 0.7);
+            color:white;
+            gap:10vh
+        }
+        @keyframes gradientShift {
+    0%  {
+        background-position: 0% 50%;
+        }
+    50% {
+        background-position: 100% 50%;
+        }
+    100%{
+        background-position: 0% 50%;
+        }
+    }
+
+        
+        /*<!--Image shaping & animation-->*/
+
+        img{
+            border-radius: 20px;
+            box-shadow: 45px 20px 35px rgba(0, 0, 0, 0.4);
+            padding: 2px;
+            
+            opacity: 0;
+            transform: translateY(30px);
+            animation: entrance-Effect 2.5s ease-out forwards;
+           
+            
+            
+        }
+        .fullsize{
+            border:3px solid orange;;
+            z-index: 999;
+            cursor: zoom-out;
+            display:block;
+            max-width: 685px;
+            width:100%;
+            height:100%;
+            /* position: fixed; */
+            left: 100px;
+            top: 100px;
+           
+        }
+       @keyframes entrance-Effect{
+           to{
+               opacity:1;
+               transform:translateY(0);
+           }
+       }
+       iframe{
+        border-radius: 35px;
+        box-shadow: 500px 125px 35px rgba(0, 0, 0, 0.1);
+        padding: 2px;
+        display: flex;
+        flex-direction: row;            
+        justify-content: center;        
+        align-items: center;        
+        gap: 10px;                     
+        flex-wrap: nowrap;
+       }
+       /*iframe is for the Python video game and animations*/
+       .video-container{
+        display: flex;
+        flex-direction: row;            
+        justify-content: center;        
+        align-items: center;        
+        gap: 10px;                     
+        flex-wrap: nowrap;
+        /* box-shadow: 45px 125px 35px rgba(0, 0, 0, 0.2); */
+       }
+       /*video-container is for the animations from Blender*/
+       .three-photos{
+        display: flex;
+        flex-direction: row;            
+        justify-content: center;        
+        align-items: center;        
+        gap: 10px;                     
+        flex-wrap: nowrap;
+        transition: transform 700ms ease-in-out;
+        transform-origin: center;
+        transform: scale(1);
+        cursor:zoom-in;
+
+       }
+       .nextthree{
+        display: flex;
+        flex-direction: row;            
+        justify-content: center;        
+        align-items: center;        
+        gap: 10px;                     
+        flex-wrap: nowrap;
+        transition: transform 700ms ease-in-out;
+        transform-origin: center;
+        transform: scale(1);
+        cursor:zoom-in;
+
+       }
+       /*3-photos are for the first two Blender images */
+       /*Fonts for headings*/
+       h1{
+           font-family: "Brush Script MT", cursive;
+           font-size: 2.8rem;
+           color:#E6E6E6;
+            
+       }
+       h2{
+           font-family: 'Barrio', cursive;
+           font-size: 1.4rem;
+           color:white;
+       }
+    </style>
+     <meta charset="UTF-8">
+     <meta http-equiv=""X-UA-Compatibale" content=""IE=edge">
+     <meta name="viewport" content=""width=device-width, inital-scale>
+     <title>Marshon's Portfolio</title>
+</head>
+        <body>
+        <div class="navbar">
+            <div class="logo">
+            <b>Ward's Portfolio</b>
+        </div>
+        <ul class="nav_links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        </div> 
+    
+    <div style="padding-right: 1rem; padding-left: 1rem;">
+        <h1><center> Works (Games, Animations, & Images)</center></h1>
+        <!--Hr = Line-->
+        <hr>
+        <h2><center>Images</center></h2>
+        <!--Hr = Line-->
+        <hr>
+        <audio id= "song">
+            <source src="Background_Music_for_Portfolio (1).mp3">
+        </audio>
+
+        <div class= "three-photos">
+        <img src= "https://codehs.com/uploads/1b7a6fd2610ce56ea21881103fa90907"
+        class="img"  width= 30% height= 30% id= "img1" onclick= "change(this)">
+        <img src= "https://codehs.com/uploads/cfa791c59c9b4683cf966efcdcec4ef0"
+        class="img"  width= 30% height= 30% id= "img2" onclick= "change(this)">
+        <img src= "https://codehs.com/uploads/2c44009fad6e028e124045627471d34b"
+        class="img"  width= 30% height= 30% id= "img3" onclick= "change(this)">
+        
+        </div>
+        <div class= "nextthree">
+        <img src= "https://codehs.com/uploads/7ec86a8195ec03132013aae605ddb81d"
+        class="img" width= 15% height= 10% id="img4" onclick= "change(this)">
+        <img src= https://codehs.com/uploads/10b0638c2e8de641cab44e3b397d867c
+        class="img" width= 15% height= 15% id="img4" onclick= "change(this)">
+         <img src= https://codehs.com/uploads/ea95260e246412788f015f3dbeceedd1
+        class="img" width= 15% height= 15% id="img4" onclick= "change(this)">
+        </div>
+        <p><center>In August 7th of 2026, I was able to make these pieces of art using a software called Blender (Shout out to Chicago Center for Arts & Technology for making it happen) to make 
+        my own original character from a video game called Splatoon which introduces Inklings which are Humanoid Squids and Octolings which are Humanoid Octopuses as 
+        characters to make yourself. The game itself is where 2 teams of 4 go againist each other to turf the most ink to win. I would then make my character that's related to me. 
+        His name is Speedy Riftwalker. He's from a marine species called "Octolings" which are Humanoid Octopuses. Speedy was usually isolated away from most inklings due to being bullied and feeling less of a person. He hated school not because of learning 
+        but rather of people who couldn't understand who is he at heart and only bullied him for the outside appearance of himself. Speedy was always at his lowest everyday and trying to see if hope is even still a thing.
+        Throughout life, Speedy was an Octoling who always wanted to explore and never give up in what he wants for himself and others. 
+        When Speedy would make it to high school, he would begin to explore himself far more and being able to become more joyful, finding his own group of friends, and
+        giving a more appreciation to education and life.</center>
+        <p><center>Also I wanna showcase my digital illustrations under my Blender images. These were made during my senior year of high school using Adobe Illustrator where I was able
+            to have a better understanding of 2D/3D Digital Imaging.</center>
+        </p>
+        </p>
+        <hr>
+        <h2><center>Video Game (Coded using Python)</center></h2>
+        <hr>
+        <div class= "game">
+        <p><center>In my junior year at Whitney M. Young Magnet High School I started Honors Exploring Computer Science 
+        as one of my classes and it was the best experience that I ever had out of all my classes in all my years in high school. My problem-solving
+        skills increased, I was always excited to learn something new everyday. When our semester 2 of finals came, this video game that is presented was my final 
+        it's a text-based game that I coded using Python called College Basketball 26'-27'. This project was able to bring out the best of me as I worked this entire project 
+        by myself and had full creativity on what I could do. The main message when it came to making this video game is choices always matter because it affects your outcome.
+        You can either make the worse decisions and have the worst consequences or make the right decisions and have less consequences or none. You decide how life goes.</p></center>
+        <center><iframe width="850" height="500" src="https://codehs.com/sandbox/magentawren4456/college-basketball-26-27/embed/?display_mode=default&read_only=True&show_file_tree=False" frameborder="0" allowfullscreen class="video-iframe"></iframe></center>
+        </div>
+        <hr>
+        <center><h2>Animations (Blender)</h2></center>
+        <hr>
+        <div class= "video-container">
+        <iframe width="850" height="480" src="https://www.youtube.com/embed/XfQC34nAZzg?si=3Z2kyPyu8yjkMmzv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="850" height="480" src="https://www.youtube.com/embed/oN3MFbsibWA?si=12QqGuwo2youFsI9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h3>Animation #2 Artist Statement (2026)</h3>
+        <p>
+        This animation is about a character from Splatoon named Speedy Takeshi (Ta-K-She) Riftwalker. 
+        He is an 18 year old, half-Nigerian and half Japanese Octoling Boy from a video game franchise called Splatoon and 
+        is considered the fastest octoling in the universe. Speedy has dealt with a life of battles, lessons on top of lessons, and sometimes peaceful moments due to the friends he's made along the way. Even though this character exists in a game already, I created my own backstory and lore for him for this animation.
+        </p>
+        <p>
+        At the age of 3, Speedy Riftwalker was attacked by a group of a species called Inklings, 
+        which traumatized him. They attacked him because as a species, Octolings were not accepted by inklings during the time 
+        Splatoon 1 and 2 took place. Most of Speedy's life was spent with his father Oletunji Riftwalker who is Nigerian, and his mother Ayame Riftwalker. They both trained him for 15 years to mature into what he is today.  
+        His father was his only role model, and his mother built his soft personality. But after the attack, Speedy would find it hard to trust others. During childhood, he always kept himself separated and alone, 
+        sitting under a cherry blossom tree reading books.
+        </p>
+        <p>
+        Around the age of 12, Speedy went missing for a year. During that time, 
+        he became an agent named "Agent 8" for a location in Splatoon 2 called the Deepsea Metro. 
+        Unfortunately, he forgot his Octoling roots due to a psychic attack. 
+        Throughout that year, Speedy battled many foes that began building him up for his teenage years, and ultimately, he was able to save his universe's world and live in peace- just in time to start high school. When he finally made it to the surface of Inkopolis Square, he realized 
+        that it was his home, and luckily, his parents found him.
+        </p>
+        <p>
+        Throughout his high school years, Speedy Riftwalker was a very disciplined and confident student, and on top of that, he was also a skilled fighter. 
+        He also made friends with his first teammates when he met Team Blare, 
+        which was made up of Rogue Surebrec, Marigold Jewels, and Esme Cover. 
+        Speedy challenged all three to a fight and won, and then offered to teach them fighting skills and life skills. 
+        They accepted and he became part of Team Blare, building trust and friendship with the others.
+        </p>
+        <p>
+        Today, Speedy lives in his own home, expressing himself as a simple and clean person.  
+        In the animation, we see Speedy's interior world and hear his inner thoughts. 
+        He decorates his house with many photos of his team because they were the first ever friends he made. 
+        The main concept of this animation is exploring Speedy's thoughts about his Octoling heritage and his origins. 
+        Speedy ponders his identity deeply as he plans to talk with his friends Rogue Surebrec and Marigold Jewels to go to an old location called 
+        Octo Valley to search for their roots as Octolings. 
+        </p>
+        <p>
+        The video game Splatoon is a third person shooter video game that consists of humanoid species of squids and octopuses. 
+        It really opened my eyes to character-making, creativity, and story telling. For my animation, I downloaded some models, but also created some on my own from scratch in order to make a mixed-poly home for my character. 
+        The inspiration for this animation is my love of culture and identity. Speedy's thoughts were about finding his true cultural identity with the friends he can connect with because the same species as him. 
+        The backstory I created for Speedy is very similar to my own- having trouble making friends as a young child, and then becoming more confident and mature. I was able to express my identity through a character I made that was based on how I viewed my early life and how I was treated. 
+        Ever since I've made my first friends around my pre-teen years, my whole life changed for the better and unlocked more of my identity and finding my passion.
+        </p>
+        <hr>
+        <hr>
+        <h3>Animation #1 Artist Statement (2024)</h3>
+        <p>
+        This is the first ever animation I did during my time with Chicago Center for Arts & Technology and it was able to open my eyes to a new world of art, a more 3D way. 
+        When I first watched Dragon Ball Z which was made by Japanese manga artist Akira Toriyama, 
+        I loved it and considered it the best anime I ever saw out of all the other anime I had seen in the past. 
+        I loved the characters, the setting, the plots and climaxes in each saga but my favorite of all, is when Son Goku faced Prince Vegeta. That was a truly intense battle and I loved every second of it. 
+        </p>
+        <p>
+         The fight that goes on in this animation shows my love for action because that's what I love in an anime, tv show, or movie as it's able to make conflicts intense and makes you wonder, "Who's gonna win this fight?" And at the end you see the protagonist or side character have the best moment in that one scene that makes them known in tv shows, movies, or anime. This fight was about when Goku whose real Saiyan name is Kakarot which is similar to the pronunciation of the word, "carrot".  
+         Settling onto Earth as a child, his race the Saiyans were expecting him 
+         to conquer Earth as it was settled with many weak humans. His brother Raditz who only knew him as a baby, went to Earth to check on Goku, 
+         But when Goku settled into Earth he became its most powerful protector with a pure heart while being trained in the martial arts and other life skills. As the Saiyans Nappa and Vegeta came, 
+         so did Goku and to cut it short, Nappa was quickly out of the picture so now it was to the iconic showdown of Goku vs Vegeta. 
+         Vegeta is a very prideful Saiyan and whenever Goku had the upper hand on Vegeta, Vegeta felt humiliated and was ready to destroy Goku, but Goku still had one more move. 
+        </p>
+        <p>
+        Goku would use a Kaioken times 4 which multiples his strength, hearing, senses, and every other personalities he uses in a fight to defeat Vegeta and it was starting to work that both 
+        saiyans were in a beam struggle but Goku had to break 
+        the limit and use a Kaioken x4 which was able to send Vegeta flying. The battle ended and Goku won. 
+        I learned from that fight anything is possible if you put your mind to it. 
+        Do not let other people tell you how your life and story is supposed to be. You write that story. 
+        </p>
+        </div>
+
+    </div>
+        
+        <!--JavaScript Code for zooming in photos & bg audio-->
+        <script>
+            //Zoom-In
+            function change(element){
+                element.classList.toggle("fullsize");
+            
+            }
+            // This code is for my own original music for the website
+           window.addEventListener('click', () => {
+            document.getElementById("song").play();
+           });
+            //need an if statement: if either of my animations play, the music should fade out or automaticallly stop while having the option
+            //to manually stop the music (need a button) or if a youtube video is played then the music will stop with a fade. 
+
+        </script>
+        
+    </body>
+</html>
